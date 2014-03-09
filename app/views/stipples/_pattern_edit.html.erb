@@ -1,3 +1,29 @@
+<script type="text/javascript">
+$( function() {
+  alert("Loaded custom JS on EDIT PATTERN");
+
+ $('#stipple_table td').unbind("click").click( function() {
+    var stipple = $(this).children(":first").val();
+    if (stipple == '0') {
+      $(this).css('background-color', 'black'); 
+      $(this).children(":first").val('1'); 
+    } else if (stipple == '1') {
+      $(this).css('background-color', 'white');
+      $(this).children(":first").val('0');
+    }
+  } );
+
+  $("#commit").unbind("click").click( function() {
+    //combine all of the ids
+    var stipple_num = '';
+    $("#stipple_table td").each( function() {
+      stipple_num += $(this).children(":first").val();
+    });
+    //update the input field
+    $("#stipple_pattern").val(stipple_num);
+  } );
+} );
+</script>
 <table id="stipple_table" border=1 cellpadding=15 cellspacing=0>
   <tr>
   <% pattern = (@stipple.pattern && @stipple.pattern.length == 256) ? @stipple.pattern : "0"*256 %>
