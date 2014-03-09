@@ -16,12 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <script type="text/javascript">
-      alert("Javascript");
-    </script>
-    <table id="stipple_table" border=1 cellpadding=15 cellspacing=0>
-      <%= render 'pattern' %>
-    </table>
+    <%= render 'pattern_edit' %>
     <%= f.text_field :pattern, hidden: true %>
   </div>
   <div class="actions">

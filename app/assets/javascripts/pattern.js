@@ -4,7 +4,7 @@ $( function() {
     if (stipple == '0') {
       $(this).css('background-color', 'black'); 
       $(this).children(":first").val('1'); 
-    } else {
+    } else if (stipple == '1') {
       $(this).css('background-color', 'white');
       $(this).children(":first").val('0');
     }

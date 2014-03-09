@@ -1,0 +1,14 @@
+<table id="stipple_table" border=1 cellpadding=15 cellspacing=0>
+  <tr>
+  <% pattern = (@stipple.pattern && @stipple.pattern.length == 256) ? @stipple.pattern : "0"*256 %>
+    <% pattern.split('').each_with_index {|stipple,i| %>
+      <% if (i)%16 == 0 && !i.zero? %>
+        </tr><tr>
+      <% end %>
+      <% color = stipple.to_i.zero? ? "white" : "black" %>
+      <td id="<%= i %>" style="background-color: <%= color %>">
+      <input id="<%= i %>" type="hidden" value="<%= stipple %>" />
+      </td>
+    <% } %>
+  </tr>
+</table>
