@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stipple.name %>
+</p>
+
+<p>
+  <strong>Pattern:</strong>
+  <table id="stipple_table_show" style="border-collapse: collapse;" cellpadding=15> 
+    <%= render 'pattern' %>
+  </table>
+</p>
+
+<%= link_to 'Edit', edit_stipple_path(@stipple) %> |
+<%= link_to 'Back', stipples_path %>

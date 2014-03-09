@@ -1,0 +1,27 @@
+<h1>Listing stipples</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stipples.each do |stipple| %>
+      <tr>
+        <td><%= stipple.name %></td>
+        <td><%= link_to 'Show', stipple %></td>
+        <td><%= link_to 'Edit', edit_stipple_path(stipple) %></td>
+        <td><%= link_to 'Destroy', stipple, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stipple', new_stipple_path %>

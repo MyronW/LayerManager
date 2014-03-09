@@ -1,0 +1,23 @@
+$( function() {
+ $('td').click( function() {
+    //get input w/ same id as td
+    var stipple = $(this).children(":first").val();
+
+    if (stipple == '0') {
+      $(this).css('background-color', 'black'); 
+      stipple = 1;
+    } else {
+      $(this).css('background-color', 'white');
+      stipple = 0;
+    }
+    //else
+    //background white
+    //value zero
+
+    //update final number
+  } );
+} );
+
+//TODO
+// 1) Create string value from all TD values in this table
+// 2) Toggle clicks
