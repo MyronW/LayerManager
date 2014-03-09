@@ -1,7 +1,6 @@
+<!-- NOTE: Bad practice to place this JS outside of the asset pipeline, but IE screws up without it here -->
 <script type="text/javascript">
 $( function() {
-  alert("Loaded custom JS on EDIT PATTERN");
-
  $('#stipple_table td').unbind("click").click( function() {
     var stipple = $(this).children(":first").val();
     if (stipple == '0') {
