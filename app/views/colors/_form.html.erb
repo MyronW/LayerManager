@@ -1,0 +1,42 @@
+<%= form_for(@color) do |f| %>
+  <% if @color.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@color.errors.count, "error") %> prohibited this color from being saved:</h2>
+
+      <ul>
+      <% @color.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div id="picker"></div>
+   <script type="text/javascript">
+   $(document).ready(function() { 
+      $('#picker').colpick({
+         flat:true,
+         colorScheme:'light',
+         layout:'rgbhex',
+         submit:0,
+         color:$('#color_hex').val(),
+         onChange:function(hsb,hex,rgb,el) {
+                  $('#color_hex').val(hex);
+         }
+      });
+    });
+  </script>
+  <br>
+  <div class="field">
+    <%= f.label :hex %><br>
+    #<%= f.text_field :hex %>
+  </div>
+ <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
