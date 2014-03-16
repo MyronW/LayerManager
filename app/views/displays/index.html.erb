@@ -1,0 +1,33 @@
+<h1>Listing displays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Stipple</th>
+      <th>Fill</th>
+      <th>Border</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @displays.each do |display| %>
+      <tr>
+        <td><%= display.name %></td>
+        <td><%= @stipples.find(display.stipple_id).name %></td>
+        <td><%= @colors.find(display.fill_id).name %></td>
+        <td><%= @colors.find(display.border_id).name %></td>
+        <td><%= link_to 'Show', display %></td>
+        <td><%= link_to 'Edit', edit_display_path(display) %></td>
+        <td><%= link_to 'Destroy', display, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Display', new_display_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @display.name %>
+</p>
+
+<p>
+  <strong>Stipple:</strong>
+  <%= @display.stipple_id %>
+</p>
+
+<p>
+  <strong>Fill:</strong>
+  <%= @display.fill_id %>
+</p>
+
+<p>
+  <strong>Border:</strong>
+  <%= @display.border_id %>
+</p>
+
+<%= link_to 'Edit', edit_display_path(@display) %> |
+<%= link_to 'Back', displays_path %>
