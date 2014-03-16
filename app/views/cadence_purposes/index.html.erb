@@ -1,0 +1,29 @@
+<h1>Listing cadence_purposes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cadence_purposes.each do |cadence_purpose| %>
+      <tr>
+        <td><%= cadence_purpose.name %></td>
+        <td><%= cadence_purpose.number %></td>
+        <td><%= link_to 'Show', cadence_purpose %></td>
+        <td><%= link_to 'Edit', edit_cadence_purpose_path(cadence_purpose) %></td>
+        <td><%= link_to 'Destroy', cadence_purpose, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cadence purpose', new_cadence_purpose_path %>

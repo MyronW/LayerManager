@@ -1,4 +1,6 @@
 LayerManager::Application.routes.draw do
+  resources :cadence_purposes
+
   resources :colors
 
   resources :stipples
