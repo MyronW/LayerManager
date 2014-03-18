@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @layer.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @layer.description %>
+</p>
+
+<p>
+  <strong>Gds number:</strong>
+  <%= @layer.gds_number %>
+</p>
+
+<p>
+  <strong>Gds purpose:</strong>
+  <%= @layer.gds_purpose %>
+</p>
+
+<p>
+  <strong>Display:</strong>
+  <%= @layer.display %>
+</p>
+
+<p>
+  <strong>Cadence number:</strong>
+  <%= @layer.cadence_number %>
+</p>
+
+<p>
+  <strong>Cadence purpose:</strong>
+  <%= @layer.cadence_purpose %>
+</p>
+
+<%= link_to 'Edit', edit_layer_path(@layer) %> |
+<%= link_to 'Back', layers_path %>

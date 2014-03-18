@@ -1,0 +1,39 @@
+<h1>Listing layers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Gds number</th>
+      <th>Gds purpose</th>
+      <th>Display</th>
+      <th>Cadence number</th>
+      <th>Cadence purpose</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @layers.each do |layer| %>
+      <tr>
+        <td><%= layer.name %></td>
+        <td><%= layer.description %></td>
+        <td><%= layer.gds_number %></td>
+        <td><%= layer.gds_purpose %></td>
+        <td><%= layer.display %></td>
+        <td><%= layer.cadence_number %></td>
+        <td><%= layer.cadence_purpose %></td>
+        <td><%= link_to 'Show', layer %></td>
+        <td><%= link_to 'Edit', edit_layer_path(layer) %></td>
+        <td><%= link_to 'Destroy', layer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Layer', new_layer_path %>
