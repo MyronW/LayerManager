@@ -1,0 +1,29 @@
+@import "bootstrap";
+
+html {
+  overflow-y: scroll;
+}
+
+section {
+  overflow: auto;
+}
+
+#wrapper{
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto; 
+  position: relative; //make #wrapper position non-static
+  min-height: 99%;
+}
+
+#footer {
+  border-top: 1px solid $grayLight;
+  margin-top:    10px;
+  margin-bottom: 10px;
+
+  height: 50px; 
+  position: absolute; //tells the browser to position #footer relative to #wrapper
+  bottom: 3;
+  width: inherit;
+  text-align: center;
+}
