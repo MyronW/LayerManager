@@ -1,6 +1,6 @@
 development:
-  adapter: postgresql
-  database: layermanager_dev
+  adapter: sqlite3
+  database: db/layermanager_dev.sqlite3
   pool: 5
   timeout: 5000
 

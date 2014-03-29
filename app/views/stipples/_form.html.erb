@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= render 'pattern_edit' %>
-    <%= f.text_field :pattern, hidden: true %>
+    <%= f.hidden_field :pattern %>
   </div>
   <div class="actions">
     <%= f.submit id: "commit" %>

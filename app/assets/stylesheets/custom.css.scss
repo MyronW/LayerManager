@@ -1,29 +1,97 @@
 @import "bootstrap";
 
 html {
-  overflow-y: scroll;
+  overflow: auto;
+  height: 100%;
 }
 
 section {
   overflow: auto;
 }
 
-#wrapper{
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto; 
-  position: relative; //make #wrapper position non-static
-  min-height: 99%;
+$navlight: #DDDDDD;
+$navdark: #AAAAAA;
+
+//.navbar, .nav, li, a {
+//	height: 60px;
+//}
+
+.nav-rad {
+  background-color: $navlight; /* fallback color, place your own */
+
+  ///* Gradients for modern browsers, replace as you see fit */
+  background-image: -moz-linear-gradient(top,                  $navlight,     $navdark);
+  background-image: -ms-linear-gradient(top,                   $navlight,     $navdark);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($navlight), to($navdark));
+  background-image: -webkit-linear-gradient(top,               $navlight,     $navdark);
+  background-image: -o-linear-gradient(top,                    $navlight,     $navdark);
+  background-image: linear-gradient(top,                       $navlight,     $navdark);
+  background-repeat: repeat-x;
+
+  /* IE8-9 gradient filter */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$navdark, endColorstr=$navlight, GradientType=0);
+  
+//  width: 90%;
+//  margin-left: 5%;
+//  margin-right: 5%; 
+
+  .container {
+     width: 80%;
+     margin-left: 10%;
+     margin-right: 5%;
+  }
+
+ // -moz-border-radius:    10px 10px 10px 10px;
+ // -webkit-border-radius: 10px 10px 10px 10px;
+ // border-radius:         10px 10px 10px 10px;
 }
 
-#footer {
-  border-top: 1px solid $grayLight;
-  margin-top:    10px;
-  margin-bottom: 10px;
+.pull-right {
+  font-weight: bold;
+  font-size: 15px;
 
-  height: 50px; 
-  position: absolute; //tells the browser to position #footer relative to #wrapper
-  bottom: 3;
-  width: inherit;
+  li {
+   padding-left: 40px;
+  }
+}
+
+.navbar-side {
+  width: 10%;
+  height: 100%;
+//  margin-left: 5%;
+  float: left;
+  position: fixed;
+  background-color: #DEDEDE;
+
+}
+
+body {
+//  height: 95%;
+
+  background-color: #F2F2F2;
+
+  .main {
+    //height: 85%;
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 5px;
+    background-color: #FFFFFF;
+    padding: 25px;
+    //border-radius: 12px;
+//    border: 2px solid $navdark;
+    box-shadow: 5px 5px 5px $navlight;
+  }
+}
+
+
+.footer {
+  border-top: 1px solid $grayLight;
+  margin-top:    30px;
+//  margin-bottom: 10px;
+  margin-left:   20%;
+
+  //height: 50px; 
+  width: 60%;
   text-align: center;
 }
+
