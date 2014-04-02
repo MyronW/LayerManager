@@ -1,3 +1,4 @@
+<% provide(:title, (params[:action]+' '+params[:controller].singularize).split.map(&:capitalize).join(' ')) %>
 <h1>New display</h1>
 
 <%= render 'form' %>

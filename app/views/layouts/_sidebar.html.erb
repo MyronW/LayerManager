@@ -1,10 +1,11 @@
 <div class="navbar-side">  
   <ul class="nav nav-tabs nav-stacked">
-    <li class="active"><a href="#">PDKs</a></li>
-    <li><%= link_to "Layers",      layers_path  %></li>
-    <li><%= link_to "Displays",    displays_path  %></li>
-    <li><%= link_to "Stipples",    stipples_path  %></li>
-    <li><%= link_to "Colors",      colors_path    %></li>
+    <li class="<%= 'active' if params[:controller] == 'static_pages' %>"><%= link_to "<i class='fa fa-fw fa-globe'></i>PDKs".html_safe, root_path %></li>
+    <li class="<%= 'active' if params[:controller] == 'layers' %>"><%= link_to "<i class='fa fa-fw fa-bars'></i>Layers".html_safe  ,      layers_path  %></li>
+    <li class="<%= 'active' if params[:controller] == 'cadence_purposes' %>"><%= link_to "<i class='fa fa-fw fa-sort-numeric-asc'></i>Purposes".html_safe,    cadence_purposes_path  %></li>
+    <li class="<%= 'active' if params[:controller] == 'displays' %>"><%= link_to "<i class='fa fa-fw fa-desktop'></i>Displays".html_safe,    displays_path  %></li>
+    <li class="<%= 'active' if params[:controller] == 'stipples' %>"><%= link_to "<i class='fa fa-fw fa-th'></i>Stipples".html_safe,    stipples_path  %></li>
+    <li class="<%= 'active' if params[:controller] == 'colors' %>"><%= link_to "<i class='fa fa-fw fa-tachometer'></i>Colors".html_safe  ,      colors_path    %></li>
   </ul>
-<%= render 'layouts/footer' %>
+
 </div>
