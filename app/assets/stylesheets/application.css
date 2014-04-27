@@ -11,4 +11,11 @@
  *= require_self
  *= require_tree .
  *= require colpick
+ *= require bootstrap.css
+ *= require dataTables.bootstrap.css
+ *= require font-awesome
+ *= require morris-0.4.3.min.css
+ *= require sb-admin.css
+ *= require social-buttons.css
+ *= require timeline.css
  */

@@ -1,5 +1,5 @@
 <% provide(:title, (params[:action]+' '+params[:controller].singularize).split.map(&:capitalize).join(' ')) %>
-<h1>Editing stipple</h1>
+<% provide(:h, "Editing stipple") %>
 
 <%= render 'form' %>
 

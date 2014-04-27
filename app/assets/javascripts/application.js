@@ -10,8 +10,22 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require colpick
+/// require jquery
+/// require jquery_ujs
+//= require jquery-1.10.2.js
 //= require_tree .
 //= require turbolinks
+// require bootstrap.js
+//= require bootstrap.min.js
+//= require colpick.js
+//= require excanvas.min.js
+//= require jquery.dataTables.js
+//= require dataTables.bootstrap.js
+//= require jquery.flot.js
+//= require jquery.flot.pie.js
+//= require jquery.flot.resize.js
+//= require jquery.flot.tooltip.min.js
+//= require jquery.metisMenu.js
+//= require morris.js
+//= require raphael-2.1.0.min.js
+//= require sb-admin.js
