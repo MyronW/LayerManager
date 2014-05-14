@@ -20,12 +20,12 @@
     <%= select :display, :stipple_id, @stipples.collect{|s| [s.name, s.id]} %>
   </div>
   <div class="field">
-    <%= f.label :fill_id %><br>
-    <%= select :display, :fill_id, @colors.collect{|c| [c.name, c.id]} %>
+    <%= f.label :fill_color_id %><br>
+    <%= select :display, :fill_color_id, @colors.collect{|c| [c.name, c.id]} %>
   </div>
   <div class="field">
-    <%= f.label :border_id %><br>
-    <%= select :display, :border_id, @colors.collect{|c| [c.name, c.id]} %>
+    <%= f.label :border_color_id %><br>
+    <%= select :display, :border_color_id, @colors.collect{|c| [c.name, c.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

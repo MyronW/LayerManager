@@ -69,6 +69,6 @@ class LayersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def layer_params
-      params.require(:layer).permit(:name, :description, :gds_number, :gds_purpose, :display, :cadence_number, :cadence_purpose)
+      params.require(:layer).permit(:name, :description, :gds_number, :gds_purpose, :display_id, :cadence_number, :cadence_purpose_id)
     end
 end

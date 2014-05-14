@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140316204358) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20140510232413) do
 
   create_table "cadence_purposes", force: true do |t|
     t.string   "name"
@@ -33,10 +30,10 @@ ActiveRecord::Schema.define(version: 20140316204358) do
   create_table "displays", force: true do |t|
     t.string   "name"
     t.integer  "stipple_id"
-    t.integer  "fill_id"
-    t.integer  "border_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "fill_color_id"
+    t.integer  "border_color_id"
   end
 
   create_table "layers", force: true do |t|
@@ -44,9 +41,22 @@ ActiveRecord::Schema.define(version: 20140316204358) do
     t.text     "description"
     t.integer  "gds_number"
     t.integer  "gds_purpose"
-    t.integer  "display"
     t.integer  "cadence_number"
-    t.integer  "cadence_purpose"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "display_id"
+    t.integer  "cadence_purpose_id"
+  end
+
+  create_table "layers_pdks", id: false, force: true do |t|
+    t.integer "pdk_id"
+    t.integer "layer_id"
+  end
+
+  add_index "layers_pdks", ["pdk_id", "layer_id"], name: "index_layers_pdks_on_pdk_id_and_layer_id"
+
+  create_table "pdks", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

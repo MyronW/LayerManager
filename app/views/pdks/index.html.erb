@@ -1,0 +1,27 @@
+<h1>Listing pdks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pdks.each do |pdk| %>
+      <tr>
+        <td><%= pdk.name %></td>
+        <td><%= link_to 'Show', pdk %></td>
+        <td><%= link_to 'Edit', edit_pdk_path(pdk) %></td>
+        <td><%= link_to 'Destroy', pdk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pdk', new_pdk_path %>

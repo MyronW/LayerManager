@@ -1,4 +1,5 @@
 <% provide(:title, (params[:action]+' '+params[:controller].singularize).split.map(&:capitalize).join(' ')) %>
+<% provide(:h, "#{@color.name.capitalize}") %>
 <p id="notice"><%= notice %></p>
 
 <p>

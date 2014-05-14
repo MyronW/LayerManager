@@ -1,3 +1,7 @@
 class Display < ActiveRecord::Base
-  has_many :colors
+  belongs_to :fill_color,   :class_name => "Color"
+  belongs_to :border_color, :class_name => "Color"
+  belongs_to :stipple
+
+  has_many :layers
 end

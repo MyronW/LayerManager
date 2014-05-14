@@ -77,6 +77,6 @@ class DisplaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def display_params
-      params.require(:display).permit(:name, :stipple_id, :fill_id, :border_id)
+      params.require(:display).permit(:name, :stipple_id, :fill_color_id, :border_color_id)
     end
 end

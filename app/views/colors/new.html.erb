@@ -1,5 +1,6 @@
-<% provide(:title, (params[:action]+' '+params[:controller].singularize).split.map(&:capitalize).join(' ')) %>
-<% provide(:h, "New color") %>
+<% title = (params[:action]+' '+params[:controller].singularize).split.map(&:capitalize).join(' ') %>
+<% provide(:title, title) %>
+<% provide(:h, title) %>
 
 <%= render 'form' %>
 

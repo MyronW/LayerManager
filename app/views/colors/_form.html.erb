@@ -19,16 +19,18 @@
   <div id="picker"></div>
    <script type="text/javascript">
    $(document).ready(function() { 
+      $randhex = Math.floor(Math.random()*16777215).toString(16);
       $('#picker').colpick({
          flat:true,
          colorScheme:'light',
          layout:'rgbhex',
-         submit:0,
-         color:$('#color_hex').val(),
+         submit: 0,
+         color:($('#color_hex').val() || $randhex ),
          onChange:function(hsb,hex,rgb,el) {
                   $('#color_hex').val(hex);
          }
       });
+      $('#color_hex').val($randhex);
     });
   </script>
   <br>

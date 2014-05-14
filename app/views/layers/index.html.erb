@@ -24,9 +24,9 @@
         <td><%= layer.description %></td>
         <td><%= layer.gds_number %></td>
         <td><%= layer.gds_purpose %></td>
-        <td><%= layer.display %></td>
+        <td><%= layer.display.name %></td>
         <td><%= layer.cadence_number %></td>
-        <td><%= layer.cadence_purpose %></td>
+        <td><%= layer.cadence_purpose.name %></td>
         <td><%= link_to 'Show', layer %></td>
         <td><%= link_to 'Edit', edit_layer_path(layer) %></td>
         <td><%= link_to 'Destroy', layer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

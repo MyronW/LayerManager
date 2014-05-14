@@ -1,6 +1,7 @@
 module ApplicationHelper
-  def title(title)
-    title || params[:controller]
+  def title(given_title)
+    page_title = given_title || params[:controller]
+    "Layer Manager: #{page_title}"
   end
 
   def header(h)

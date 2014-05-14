@@ -23,7 +23,7 @@
 
 <p>
   <strong>Display:</strong>
-  <%= @layer.display %>
+  <%= @layer.display.name %>
 </p>
 
 <p>
@@ -33,7 +33,7 @@
 
 <p>
   <strong>Cadence purpose:</strong>
-  <%= @layer.cadence_purpose %>
+  <%= @layer.cadence_purpose.name %>
 </p>
 
 <%= link_to 'Edit', edit_layer_path(@layer) %> |

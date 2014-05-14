@@ -12,20 +12,12 @@
       <%= render 'layouts/header' %>
       <%= render 'layouts/sidebar' %>
       <div id="page-wrapper">
-              <% flash.each do |key, value| %>
-                <div class="alert alert-<%= key %>"><%= value %></div>
-              <% end %>
               <div class="row">
                    <div class="col-lg-12">
                        <h1 class="page-header"><%= header(yield(:h)) %></h1>
                    </div>
                </div>
               <%= yield %>
-      <% if Rails.env.development? %>
-        <p>
-        <%= debug(params) %>
-        </p>
-      <% end %>
       </div> <!-- /wrapper -->
       <%= render 'layouts/footer' %>
     </div>
