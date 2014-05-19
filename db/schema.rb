@@ -48,12 +48,12 @@ ActiveRecord::Schema.define(version: 20140510232413) do
     t.integer  "cadence_purpose_id"
   end
 
-  create_table "layers_pdks", id: false, force: true do |t|
+  create_table "pdk_layers", id: false, force: true do |t|
     t.integer "pdk_id"
     t.integer "layer_id"
   end
 
-  add_index "layers_pdks", ["pdk_id", "layer_id"], name: "index_layers_pdks_on_pdk_id_and_layer_id"
+  add_index "pdk_layers", ["pdk_id", "layer_id"], name: "index_pdk_layers_on_pdk_id_and_layer_id"
 
   create_table "pdks", force: true do |t|
     t.string   "name"

@@ -19,6 +19,7 @@ class PdksController < ApplicationController
 
   # GET /pdks/1/edit
   def edit
+    @layers = Layer.all
   end
 
   # POST /pdks
@@ -69,6 +70,6 @@ class PdksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pdk_params
-      params.require(:pdk).permit(:name)
+      params.require(:pdk).permit(:name, { :layer_ids => [] })
     end
 end

@@ -1,3 +1,6 @@
 class Pdk < ActiveRecord::Base
-  has_and_belongs_to_many :layers
+  has_many :pdk_layers
+  has_many :layers, :through => :pdk_layers
+
+  accepts_nested_attributes_for :pdk_layers, :allow_destroy => true
 end
